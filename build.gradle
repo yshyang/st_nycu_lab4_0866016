@@ -17,15 +17,15 @@ test {
 dependencies {
     // JUnit Jupiter API and TestEngine implementation
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.4.2")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.4.2")
  
     // If you also want to support JUnit 3 and JUnit 4 tests
     testImplementation("junit:junit:4.12")
-    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.2")
+    testRuntimeOnly ("org.junit.vintage:junit-vintage-engine:4.12.2")
  
  
     // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
-    testRuntime("org.junit.platform:junit-platform-launcher:1.4.2")
+    testRuntimeOnly ("org.junit.platform:junit-platform-launcher:1.4.2")
     
 }
 
