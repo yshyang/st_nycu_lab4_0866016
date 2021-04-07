@@ -20,4 +20,4 @@ jobs:
     - name: Show the Gradle can work
       run: ./gradle-7.0-rc-2/bin/gradle task
     - name: Build with Gradle
-      run: ./gradle-7.0-rc-2/bin/gradle build
+      run: ./gradle-7.0-rc-2/bin/gradle compileJava
