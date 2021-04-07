@@ -10,28 +10,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    testCompile('org.junit.jupiter:junit-jupiter:5.4.2')
-  testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
-}
-test {
-  useJUnitPlatform()
-  testLogging {
-    events "passed", "skipped", "failed"
-  }
-}
-
-sourceSets {
-  main {
-    java {
-      srcDir 'src'
-    }
-  }
-
-  test {
-    java {
-      srcDir 'src'
-    }
-  }
+    implementation "joda-time:joda-time:2.2"
+    testImplementation "junit:junit:4.12"
 }
 
 jar {
