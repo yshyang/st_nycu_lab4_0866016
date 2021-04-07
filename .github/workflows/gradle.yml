@@ -31,4 +31,6 @@ jobs:
     - name: Assemble
       run: ./gradle-5.0/bin/gradle assemble
     - name: Show the path
-      run: ls ./build
+      run: |
+        ls ./build
+         ls ./build/reports
