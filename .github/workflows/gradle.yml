@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: ShowPath
-      run: ls
+      run: ls ../
     - name: Test GameTest.java 
       run: ./gradle-5.0/bin/gradle test
     - name: Upload Test Reports Folder
@@ -35,6 +35,7 @@ jobs:
         name: testReport
         path: build/reports/tests/
   Assember:
+    needs: Test
     runs-on: ubuntu-latest
     steps:
     - name: Assemble
