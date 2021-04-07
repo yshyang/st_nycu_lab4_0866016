@@ -4,9 +4,9 @@ apply plugin: 'application'
 
 repositories {
   mavenCentral()
-  jcenter()
+    mavenLocal()
 }
-
+sourceCompatibility = 1.8
 
 test {
   useJUnitPlatform()
@@ -15,9 +15,8 @@ test {
   }
 }
 dependencies {
-    // JUnit Jupiter API and TestEngine implementation
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
-    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.4.2")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
  
     // If you also want to support JUnit 3 and JUnit 4 tests
     testImplementation("junit:junit:4.12")
