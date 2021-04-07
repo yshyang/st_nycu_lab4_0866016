@@ -16,13 +16,17 @@ test {
   }
 }
 dependencies {
-    testCompile group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '4.12.0-RC3'
-
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.0-RC3'
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.0.0-RC3'
-    compile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.0.0-RC3'
-
-    testCompile group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.0.0-RC3'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+ 
+    // If you also want to support JUnit 3 and JUnit 4 tests
+    testImplementation("junit:junit:4.12")
+    testRuntimeOnly ("org.junit.vintage:junit-vintage-engine:4.12.2")
+ 
+ 
+    // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
+    testRuntimeOnly ("org.junit.platform:junit-platform-launcher:1.4.2")
+    
 }
 
 
