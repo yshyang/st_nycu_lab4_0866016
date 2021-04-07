@@ -16,19 +16,13 @@ test {
 }
 dependencies {
     // JUnit Jupiter API and TestEngine implementation
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.4.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.4.2")
  
     // If you also want to support JUnit 3 and JUnit 4 tests
-    testCompile("junit:junit:4.12")
+    testImplementation("junit:junit:4.12")
     testRuntime("org.junit.vintage:junit-vintage-engine:4.12.2")
  
-    // To avoid compiler warnings about @API annotations in JUnit code
-    testCompileOnly('org.apiguardian:apiguardian-api:1.0.0')
- 
-    // To use Log4J's LogManager
-    testRuntime("org.apache.logging.log4j:log4j-core:2.9.0")
-    testRuntime("org.apache.logging.log4j:log4j-jul:2.9.0")
  
     // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
     testRuntime("org.junit.platform:junit-platform-launcher:1.4.2")
