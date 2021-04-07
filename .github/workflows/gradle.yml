@@ -69,10 +69,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: Release
       uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
-          files: |
-            Release.txt
-            LICENSE
+        files: |
+          Release.txt
+          LICENSE
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
