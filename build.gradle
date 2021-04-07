@@ -36,9 +36,5 @@ sourceSets {
     }
   }
 }
-jar {
-    archiveBaseName = 'gs-gradle'
-    archiveVersion =  '0.1.0'
-}
 
 
