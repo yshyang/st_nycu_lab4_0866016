@@ -13,8 +13,9 @@ test {
   }
 }
 dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.8.0-SNAPSHOT")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.0-SNAPSHOT")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.0-SNAPSHOT")
 }
 
 
