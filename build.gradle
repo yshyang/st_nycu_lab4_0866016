@@ -13,14 +13,8 @@ test {
   }
 }
 dependencies {
-    compileOnly ("org.junit.platform:junit-platform-launcher:1.8.0-SNAPSHOT")
-    compileOnly ("org.junit.jupiter:junit-jupiter-engine:5.8.0-SNAPSHOT")
-    compileOnly ("org.junit.vintage:junit-vintage-engine:5.8.0-SNAPSHOT")
-    compileOnly ("org.junit.platform:junit-platform-launcher:1.8.0-SNAPSHOT")
-    compileOnly ("org.junit.jupiter:junit-jupiter-engine:5.8.0-SNAPSHOT")
-    compileOnly ("org.junit.vintage:junit-vintage-engine:5.8.0-SNAPSHOT")
-    compileOnly  'org.junit.jupiter:junit-jupiter-api:5.0.3'
-    compileOnly  'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 }
 
 
