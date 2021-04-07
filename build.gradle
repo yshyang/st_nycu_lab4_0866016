@@ -4,17 +4,18 @@ repositories {
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-repositories { jcenter() }
+
 dependencies {
-    testCompile 'junit:junit:4.12'
-    compile 'junit:junit:4.12'
+    implementation "joda-time:joda-time:2.2"
+    testImplementation "junit:junit:4.12"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
-sourceSets {
-    main {
-        java {
-            srcDir 'src'
-        }
-    }
+test {
+  useJUnitPlatform()
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
 }
 jar {
     archiveBaseName = 'gs-gradle'
