@@ -17,4 +17,6 @@ jobs:
           LICENSE
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Path
+      run: ls
       
