@@ -5,6 +5,7 @@ apply plugin: 'application'
 repositories {
   mavenCentral()
     mavenLocal()
+     jcenter()
 }
 sourceCompatibility = 1.8
 
