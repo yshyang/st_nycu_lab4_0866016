@@ -28,7 +28,7 @@ jobs:
     - name: ShowPath
       run: ls ../
     - name: Test GameTest.java 
-      run: ./gradle-5.0/bin/gradle test
+      run: ../st_nycu_lab4_0866016/gradle-5.0/bin/gradle test
     - name: Upload Test Reports Folder
       uses: actions/upload-artifact@v2
       with:
