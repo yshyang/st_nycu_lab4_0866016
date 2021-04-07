@@ -14,9 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - run: mkdir -p path/to/artifact
-
-    - run: echo hello > path/to/artifact/world.txt
-
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
@@ -30,6 +27,8 @@ jobs:
     - name: Compile with Gradle
       run: ./gradle-5.0/bin/gradle compileJava
     - name: Test GameTest.java 
-      run: ./gradle-5.0/bin/gradle test
+      run: ./gradle-5.0/bin/gradle test > path/to/artifact/world.txt
     - name: Assemble
       run: ./gradle-5.0/bin/gradle assemble
+    - name: Show the path
+      run: ls ./build
