@@ -11,6 +11,21 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
+test {
+  useJUnitPlatform()
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
+}
+sourceSets {
+      main {
+        java {
+          0866016{
+           srcDir 'src'
+            }
+        }
+    }
+   }
 jar {
     archiveBaseName = 'gs-gradle'
     archiveVersion =  '0.1.0'
