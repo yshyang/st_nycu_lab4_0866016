@@ -61,7 +61,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: BuildJar
-        path: build/libs
+        path: build/libs/st_nycu_lab4_0866016-1.0-SNAPSHOT.jar
   Release:
     needs: [Compile,Test,Assember]
     runs-on: ubuntu-latest
@@ -79,6 +79,10 @@ jobs:
       run: ./gradle-5.0/bin/gradle assemble
     - name: Release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+      if: startsWith(github.event.ref, 'refs/tags/')
+      with:
+          files: |
+            Release.txt
+            LICENSE
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
