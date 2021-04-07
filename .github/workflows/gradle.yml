@@ -63,13 +63,13 @@ jobs:
         name: BuildJar
         path: build/libs/st_nycu_lab4_0866016-1.0-SNAPSHOT.jar
   Release:
+    if: startsWith(github.event.ref, 'refs/tags/')
     needs: [Assember]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.event.ref, 'refs/tags/')
       with:
           files: |
             Release.txt
@@ -78,7 +78,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Download math result for Assember
       uses: actions/download-artifact@v2
-      if: startsWith(github.event.ref, 'refs/tags/')
       with:
         name: BuildJar
         path: build/libs/st_nycu_lab4_0866016-1.0-SNAPSHOT.jar
