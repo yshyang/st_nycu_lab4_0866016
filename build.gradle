@@ -13,7 +13,26 @@ dependencies {
     implementation "joda-time:joda-time:2.2"
     testImplementation "junit:junit:4.12"
 }
+test {
+  useJUnitPlatform()
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
+}
 
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+  }
+
+  test {
+    java {
+      srcDir 'src'
+    }
+  }
+}
 jar {
     archiveBaseName = 'gs-gradle'
     archiveVersion =  '0.1.0'
