@@ -30,15 +30,23 @@ dependencies {
 
 
 sourceSets {
-  main {
-    java {
-      srcDir 'src'
-    }
-  }
+        main {
+            //java.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/aidl']
+            renderscript.srcDirs = ['src/main/rs']
+            jni.srcDirs = []
+            jniLibs.srcDirs = []
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = []
+        }
+        test{
+            java.srcDirs = ['test']
+        }
+        debug {
+            java.srcDirs = ['src/debug/java']
+        }
+        release {
+            java.srcDirs = ['src/release/java']
+        }
 
-  test {
-    java {
-      srcDir 'src'
     }
-  }
-}
