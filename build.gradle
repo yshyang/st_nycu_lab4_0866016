@@ -42,6 +42,4 @@ sourceSets {
     }
   }
 }
-configurations {
-    compile.exclude group: "junit", module: "junit"
-}
+
