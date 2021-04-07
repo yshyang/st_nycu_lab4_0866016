@@ -35,5 +35,5 @@ jobs:
     - name: Upload Assember Jav
       uses: actions/upload-artifact@v2
       with:
-        name: Assember Jarfile
-        path: build/bin
+        name: Assember_Jarfile
+        path: build
