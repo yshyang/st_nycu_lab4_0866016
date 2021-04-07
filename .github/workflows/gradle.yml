@@ -22,6 +22,7 @@ jobs:
     - name: Compile with Gradle
       run: ./gradle-5.0/bin/gradle compileJava
   Test:
+    needs: Compile
     runs-on: ubuntu-latest
     steps:
     - name: ShowPath
