@@ -4,24 +4,18 @@ apply plugin: 'application'
 
 mainClassName = 'hello.HelloWorld'
 
-// tag::repositories[]
-repositories { 
-    mavenCentral() 
-}
-// end::repositories[]
+repositories { jcenter() }
 
-// tag::jar[]
 jar {
     archiveBaseName = 'gs-gradle'
     archiveVersion =  '0.1.0'
 }
-// end::jar[]
 
-// tag::dependencies[]
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    implementation "joda-time:joda-time:2.2"
-    testImplementation "junit:junit:4.12"
+    testImplementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
 }
