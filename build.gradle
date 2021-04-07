@@ -19,6 +19,7 @@ dependencies {
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.4.2"
     
      testCompile('org.junit.jupiter:junit-jupiter:5.4.2')
+     implementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
     
 }
 
