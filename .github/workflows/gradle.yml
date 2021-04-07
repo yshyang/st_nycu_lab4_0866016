@@ -32,3 +32,8 @@ jobs:
       with:
         name: testReport
         path: build/reports/tests/
+    - name: Upload Assember Jav
+      uses: actions/upload-artifact@v2
+      with:
+        name: Assember Jarfile
+        path: build/bin
