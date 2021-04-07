@@ -1,8 +1,5 @@
 apply plugin: 'java'
 
-plugins {
-    id 'java'
-}
 repositories {
   mavenCentral()
     mavenLocal()
