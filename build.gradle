@@ -14,7 +14,7 @@ test {
 }
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
-    RuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 }
 
 
