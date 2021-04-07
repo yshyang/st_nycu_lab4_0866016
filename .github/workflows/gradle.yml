@@ -21,3 +21,5 @@ jobs:
       run: ./gradle-5.0/bin/gradle task
     - name: Build with Gradle
       run: ./gradle-5.0/bin/gradle compileJava
+    - name: Test GameTest.java 
+      run: ./gradle-5.0/bin/gradle test
