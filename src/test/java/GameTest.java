@@ -1,8 +1,19 @@
-package main.java;
+package test.java;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.rules.ExpectedException;
 
+import javax.lang.model.type.NullType;
+import java.util.PriorityQueue;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GameTest {
 
@@ -27,6 +38,14 @@ class GameTest {
 
         );
     }
+    @BeforeEach
+    void setUp() {
+    }
+
+    @AfterEach
+    void tearDown() {
+    }
+
     @ParameterizedTest
     @MethodSource("WhoWinProvider")
     void WhoWinTest(String Player1,String Player2,Object expected){
