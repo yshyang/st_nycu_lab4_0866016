@@ -41,3 +41,6 @@ sourceSets {
   }
 }
 
+jar {
+    duplicatesStrategy = 'exclude'
+}
