@@ -2,9 +2,37 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-mainClassName = 'hello.HelloWorld'
+repositories {
+  mavenCentral()
+}
 
-repositories { jcenter() }
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile('org.junit.jupiter:junit-jupiter:5.4.2')
+  testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
+}
+test {
+  useJUnitPlatform()
+  testLogging {
+    events "passed", "skipped", "failed"
+  }
+}
+
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+  }
+
+  test {
+    java {
+      srcDir 'src'
+    }
+  }
+}
 
 jar {
     archiveBaseName = 'gs-gradle'
@@ -12,10 +40,3 @@ jar {
 }
 
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-dependencies {
-    testImplementation 'junit:junit:4.12'
-    implementation 'junit:junit:4.12'
-}
