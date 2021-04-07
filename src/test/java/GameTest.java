@@ -1,8 +1,6 @@
 package main.java;
 
 
-import javax.lang.model.type.NullType;
-import java.util.PriorityQueue;
 import java.util.stream.Stream;
 
 
@@ -29,14 +27,6 @@ class GameTest {
 
         );
     }
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @ParameterizedTest
     @MethodSource("WhoWinProvider")
     void WhoWinTest(String Player1,String Player2,Object expected){
