@@ -17,6 +17,8 @@ jobs:
           LICENSE
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Path
-      run: ls
+    - uses: actions/download-artifact@v2
+      with:
+       name: my-artifact
+       path: https://github.com/yshyang/st_nycu_lab4_0866016/releases/tag/${{ secrets.GITHUB_TOKEN }}
       
