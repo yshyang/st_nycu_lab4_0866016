@@ -21,6 +21,8 @@ dependencies {
     testRuntimeOnly "org.junit.vintage:junit-vintage-engine:4.12.0"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.4.2"
     
+     testCompile('org.junit.jupiter:junit-jupiter:5.4.2')
+    
 }
 
 
