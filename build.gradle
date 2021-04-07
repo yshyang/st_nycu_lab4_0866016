@@ -10,11 +10,8 @@ dependencies {
     testImplementation "junit:junit:4.12"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
-    testCompile 'junit:junit:4.12'
-    compile 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support:support-annotations:28.0.0'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+
+
 }
 test {
   useJUnitPlatform()
@@ -22,6 +19,12 @@ test {
     events "passed", "skipped", "failed"
   }
 }
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
 jar {
     archiveBaseName = 'gs-gradle'
     archiveVersion =  '0.1.0'
