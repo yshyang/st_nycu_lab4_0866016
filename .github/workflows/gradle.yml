@@ -3,7 +3,7 @@ name: Java CI with Gradle
 on: [push]
 
 jobs:
-  build:
+  Compile:
 
     runs-on: ubuntu-latest
 
@@ -21,17 +21,21 @@ jobs:
       run: ./gradle-5.0/bin/gradle task
     - name: Compile with Gradle
       run: ./gradle-5.0/bin/gradle compileJava
+  Test:
+    runs-on: ubuntu-latest
+    steps:
     - name: Test GameTest.java 
       run: ./gradle-5.0/bin/gradle test
-    - name: Assemble
-      run: ./gradle-5.0/bin/gradle assemble
-    - name: Show the path
-      run: ls ./build/reports
     - name: Upload Test Reports Folder
       uses: actions/upload-artifact@v2
       with:
         name: testReport
         path: build/reports/tests/
+  Assember:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Assemble
+      run: ./gradle-5.0/bin/gradle assemble
     - name: Upload Assember Jav
       uses: actions/upload-artifact@v2
       with:
