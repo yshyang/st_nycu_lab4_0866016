@@ -17,15 +17,6 @@ test {
     events "passed", "skipped", "failed"
   }
 }
-sourceSets {
-      main {
-        java {
-          0866016{
-           srcDir 'src'
-            }
-        }
-    }
-   }
 jar {
     archiveBaseName = 'gs-gradle'
     archiveVersion =  '0.1.0'
